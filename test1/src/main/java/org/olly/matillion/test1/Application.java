@@ -9,7 +9,7 @@ public class Application {
 
     public static void main(String[] args){
         CharacterComparator comparator = new CharacterComparator();
-        String sampleOne = "Matillion Tech Test ...n";
+        String sampleOne = "Matillion Tech Test ..n";
         String sampleTwo = "Techtest from Matillion";
         log.info("Running character comparator");
         log.info("String one {}", sampleOne);
