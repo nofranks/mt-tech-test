@@ -4,13 +4,13 @@ This repository contains solutions for technical tests 1 and 2. All solutions ar
 
 ## Test 1
 
-This application takes the two strings below and compares the characters at each point in the strings respectively. The strings are 23 characters long and share a single character, resulting in a reponse of 22 differences.
+This application takes the two strings below and compares the characters at each point in the strings respectively. If two arguments are provided from the command line, they will be used for the comparision, otherwise defaults will be used. The default strings are 23 characters long and share a single character, resulting in a reponse of 22 differences.
 
 * "Matillion Tech Test ..n"
 * "Techtest from Matillion"
 
 To run in IDE:
-* Execute main method in ```org.olly.matillion.test1.Application```
+* Execute main method in ```org.olly.matillion.charactercomparator.Application```
 To run as jar:
 * From the repository root directory, change directory to 'test1'
 * Run ```mvn package```
