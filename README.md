@@ -50,6 +50,7 @@ This solution assumes a mySql database is available at ```jdbc:mysql://localhost
 
 To run in ide:
 * Execute main method in ```org.olly.matillion.foodmart.FoodmartApplication``` in test-2-spring module
+
 To run as jar:
 * From the repository root director, change directory to 'test-2-spring'
 * Run ```mvn package```
