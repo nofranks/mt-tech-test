@@ -36,7 +36,7 @@ To run in ide:
 * Execute main method in ```org.olly.matillion.foodmart.FoodmartApplication``` in test-2 module
 To run as jar:
 * From the repository root director, change directory to 'test-2'
-* Run ```mvn package````
+* Run ```mvn package```
 * Run ```java -jar target/test-2-0.0.1-SNAPSHOT-jar-with-dependencies.jar```
 
 ## test-2 SpringBoot Commandline Implementation
@@ -50,5 +50,5 @@ To run in ide:
 * Execute main method in ```org.olly.matillion.foodmart.FoodmartApplication``` in test-2-spring module
 To run as jar:
 * From the repository root director, change directory to 'test-2-spring'
-* Run ```mvn package````
+* Run ```mvn package```
 * Run ```java -jar target/test-2-0.0.1-SNAPSHOT-jar-with-dependencies.jar```
