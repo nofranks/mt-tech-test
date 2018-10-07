@@ -47,9 +47,6 @@ public class SqlEmployeeRepository implements EmployeeRepository {
     @Override
     public List<Employee> findEmployeesForDepartmentPaytypeAndEducationLevel(String department, String payType, String educationLevel) throws EmployeeQueryException, DataConnectionException {
 
-        if(department == null || payType == null || educationLevel == null)
-            throw new EmployeeQueryException("Required parameters are missing: department, pay type and education must be specified");
-
         try (
             Connection connection = dataConnection.getConnection();
             PreparedStatement stmt = connection.prepareStatement(findEmployeesForDepartmentPaytypeAndEducationLevelQuery)) {
