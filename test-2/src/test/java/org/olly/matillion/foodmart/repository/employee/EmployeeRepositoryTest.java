@@ -21,7 +21,7 @@ public class EmployeeRepositoryTest {
     }
 
     @Test
-    public void givenBrokenConnection_whenQueryingEmployees_expectDataConnectionException() throws DataConnectionException, EmployeeQueryException {
+    public void givenBrokenConnection_whenQueryingEmployees_expectDataConnectionException() throws DataConnectionException {
         when(connection.getConnection()).thenThrow(DataConnectionException.class);
         employeeRepository.dataConnection = connection;
         assertThrows(DataConnectionException.class, () -> employeeRepository.findEmployeesForDepartmentPaytypeAndEducationLevel("test", "test", "test"));

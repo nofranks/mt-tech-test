@@ -29,7 +29,6 @@ public class FoodmartCommandLineRunner implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-//        Scanner scanner = new Scanner(System.in);
 
         String department;
         String payType;

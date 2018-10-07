@@ -5,19 +5,20 @@ import java.time.LocalDateTime;
 
 public class Employee {
 
+    //required fields
     private Integer id;
     private String fullname;
     private String firstname;
     private String lastname;
     private Integer storeId;
     private Integer departmentId;
-
     private LocalDate birthDate;
     private Double salary;
     private String educationLevel;
     private String maritalStatus;
     private String gender;
 
+    //optional fields
     private Integer positionId;
     private String positionTitle;
     private LocalDateTime hireDate;
@@ -28,79 +29,6 @@ public class Employee {
     public Employee(){
         super();
     }
-
-    /*
-
-    `employee_id` int(11) NOT NULL,
-  `full_name` varchar(30) NOT NULL,
-  `first_name` varchar(30) NOT NULL,
-  `last_name` varchar(30) NOT NULL,
-  `position_id` int(11) DEFAULT NULL,
-  `position_title` varchar(30) DEFAULT NULL,
-  `store_id` int(11) NOT NULL,
-  `department_id` int(11) NOT NULL,
-  `birth_date` date NOT NULL,
-  `hire_date` datetime DEFAULT NULL,
-  `end_date` datetime DEFAULT NULL,
-  `salary` decimal(10,4) NOT NULL,
-  `supervisor_id` int(11) DEFAULT NULL,
-  `education_level` varchar(30) NOT NULL,
-  `marital_status` varchar(30) NOT NULL,
-  `gender` varchar(30) NOT NULL,
-  `management_role` varchar(30) DEFAULT NULL,
-     */
-/*
-    public static class EmployeeBuilder {
-        private Employee employeeToBuild;
-
-
-
-
-        public EmployeeBuilder(Integer id, String fullname, String firstname, String lastname, Integer storeId, LocalDate birthDate, Double salary, String educationLevel, String maritalStatus, String gender) {
-            this.id = id;
-            this.fullname = fullname;
-            this.firstname = firstname;
-            this.lastname = lastname;
-            this.storeId = storeId;
-            this.birthDate = birthDate;
-            this.salary = salary;
-            this.educationLevel = educationLevel;
-            this.maritalStatus = maritalStatus;
-            this.gender = gender;
-        }
-
-        public EmployeeBuilder setPositionId(Integer positionId) {
-            this.positionId = positionId;
-            return this;
-        }
-
-        public EmployeeBuilder setPositionTitle(String positionTitle) {
-            this.positionTitle = positionTitle;
-            return this;
-        }
-
-        public EmployeeBuilder setHireDate(LocalDateTime hireDate) {
-            this.hireDate = hireDate;
-            return this;
-        }
-
-        public EmployeeBuilder setEndDate(LocalDateTime endDate) {
-            this.endDate = endDate;
-            return this;
-        }
-
-        public EmployeeBuilder setSupervisorId(Integer supervisorId) {
-            this.supervisorId = supervisorId;
-            return this;
-        }
-
-        public EmployeeBuilder setManagementRole(String managementRole) {
-            this.managementRole = managementRole;
-            return this;
-        }
-    }
-
-*/
 
     public Integer getId() {
         return id;
@@ -259,5 +187,107 @@ public class Employee {
                 ", supervisorId=" + supervisorId +
                 ", managementRole='" + managementRole + '\'' +
                 '}';
+    }
+
+
+    public static class EmployeeBuilder {
+        private Employee employeeToBuild;
+
+        private EmployeeBuilder(){
+            employeeToBuild = new Employee();
+        }
+
+        public static EmployeeBuilder getInstance(){
+            return new EmployeeBuilder();
+        }
+
+        public Employee build(){
+            return this.employeeToBuild;
+        }
+
+        public  EmployeeBuilder id(Integer id) {
+            this.employeeToBuild.setId(id);
+            return this;
+        }
+
+        public  EmployeeBuilder fullname(String fullname) {
+            this.employeeToBuild.setFullname(fullname);
+            return this;
+        }
+
+        public  EmployeeBuilder firstname(String firstname) {
+            this.employeeToBuild.setFirstname(firstname);
+            return this;
+        }
+
+        public  EmployeeBuilder lastname(String lastname) {
+            this.employeeToBuild.setLastname(lastname);
+            return this;
+        }
+
+        public  EmployeeBuilder storeId(Integer storeId) {
+            this.employeeToBuild.setStoreId(storeId);
+            return this;
+        }
+
+        public  EmployeeBuilder birthDate(LocalDate birthDate) {
+            this.employeeToBuild.setBirthDate(birthDate);
+            return this;
+        }
+
+        public  EmployeeBuilder salary(Double salary) {
+            this.employeeToBuild.setSalary(salary);
+            return this;
+        }
+
+        public  EmployeeBuilder educationLevel(String educationLevel) {
+            this.employeeToBuild.setEducationLevel(educationLevel);
+            return this;
+        }
+
+        public  EmployeeBuilder maritalStatus(String maritalStatus) {
+            this.employeeToBuild.setMaritalStatus(maritalStatus);
+            return this;
+        }
+
+        public  EmployeeBuilder gender(String gender) {
+            this.employeeToBuild.setGender(gender);
+            return this;
+        }
+
+        public  EmployeeBuilder positionId(Integer positionId) {
+            this.employeeToBuild.setPositionId(positionId);
+            return this;
+        }
+
+        public  EmployeeBuilder positionTitle(String positionTitle) {
+            this.employeeToBuild.setPositionTitle(positionTitle);
+            return this;
+        }
+
+        public  EmployeeBuilder hireDate(LocalDateTime hireDate) {
+            this.employeeToBuild.setHireDate(hireDate);
+            return this;
+        }
+
+        public  EmployeeBuilder endDate(LocalDateTime endDate) {
+            this.employeeToBuild.setEndDate(endDate);
+            return this;
+        }
+
+        public  EmployeeBuilder supervisorId(Integer supervisorId) {
+            this.employeeToBuild.setSupervisorId(supervisorId);
+            return this;
+        }
+
+        public  EmployeeBuilder managementRole(String managementRole) {
+            this.employeeToBuild.setManagementRole(managementRole);
+            return this;
+        }
+
+        public  EmployeeBuilder departmentId(Integer departmentId) {
+            this.employeeToBuild.setDepartmentId(departmentId);
+            return this;
+        }
     }
 }

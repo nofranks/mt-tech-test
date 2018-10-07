@@ -13,27 +13,27 @@ public class EmployeeRowMapper implements RowMapper<Employee> {
 
     @Override
     public Employee mapRow(ResultSet resultSet, int rowNum) throws SQLException {
-        Employee employee = new Employee();
-        employee.setId(resultSet.getInt("employee_id"));
-        employee.setFullname(resultSet.getString("full_name"));
-        employee.setFirstname(resultSet.getString("first_name"));
-        employee.setLastname(resultSet.getString("last_name"));
-        employee.setPositionId(resultSet.getInt("position_id"));
-        employee.setPositionTitle(resultSet.getString("position_title"));
-        employee.setStoreId(resultSet.getInt("store_id"));
-        employee.setDepartmentId(resultSet.getInt("department_id"));
+        Employee.EmployeeBuilder builder = Employee.EmployeeBuilder.getInstance()
+                .id(resultSet.getInt("employee_id"))
+                .fullname(resultSet.getString("full_name"))
+                .firstname(resultSet.getString("first_name"))
+                .lastname(resultSet.getString("last_name"))
+                .positionId(resultSet.getInt("position_id"))
+                .positionTitle(resultSet.getString("position_title"))
+                .storeId(resultSet.getInt("store_id"))
+                .departmentId(resultSet.getInt("department_id"))
+                .salary(resultSet.getDouble("salary"))
+                .supervisorId(resultSet.getInt("supervisor_id"))
+                .educationLevel(resultSet.getString("education_level"))
+                .maritalStatus(resultSet.getString("marital_status"))
+                .gender(resultSet.getString("gender"))
+                .managementRole(resultSet.getString("management_role"));
         Date birthDate = resultSet.getDate("birth_date");
-        if(birthDate!=null)employee.setBirthDate(birthDate.toLocalDate());
+        if(birthDate!=null)builder = builder.birthDate(birthDate.toLocalDate());
         Timestamp hireDate = resultSet.getTimestamp("hire_date");
-        if(hireDate!=null)employee.setHireDate(hireDate.toLocalDateTime());
+        if(hireDate!=null)builder = builder.hireDate(hireDate.toLocalDateTime());
         Timestamp endDate = resultSet.getTimestamp("end_date");
-        if(endDate!=null)employee.setEndDate(endDate.toLocalDateTime());
-        employee.setSalary(resultSet.getDouble("salary"));
-        employee.setSupervisorId(resultSet.getInt("supervisor_id"));
-        employee.setEducationLevel(resultSet.getString("education_level"));
-        employee.setMaritalStatus(resultSet.getString("marital_status"));
-        employee.setGender(resultSet.getString("gender"));
-        employee.setManagementRole(resultSet.getString("management_role"));
-        return employee;
+        if(endDate!=null)builder = builder.endDate(endDate.toLocalDateTime());
+        return builder.build();
     }
 }

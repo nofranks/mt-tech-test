@@ -30,7 +30,6 @@ public class Employee {
         super();
     }
 
-
     public Integer getId() {
         return id;
     }
@@ -188,5 +187,107 @@ public class Employee {
                 ", supervisorId=" + supervisorId +
                 ", managementRole='" + managementRole + '\'' +
                 '}';
+    }
+
+
+    public static class EmployeeBuilder {
+        private Employee employeeToBuild;
+
+        private EmployeeBuilder(){
+            employeeToBuild = new Employee();
+        }
+
+        public static EmployeeBuilder getInstance(){
+            return new EmployeeBuilder();
+        }
+
+        public Employee build(){
+            return this.employeeToBuild;
+        }
+
+        public  EmployeeBuilder id(Integer id) {
+            this.employeeToBuild.setId(id);
+            return this;
+        }
+
+        public  EmployeeBuilder fullname(String fullname) {
+            this.employeeToBuild.setFullname(fullname);
+            return this;
+        }
+
+        public  EmployeeBuilder firstname(String firstname) {
+            this.employeeToBuild.setFirstname(firstname);
+            return this;
+        }
+
+        public  EmployeeBuilder lastname(String lastname) {
+            this.employeeToBuild.setLastname(lastname);
+            return this;
+        }
+
+        public  EmployeeBuilder storeId(Integer storeId) {
+            this.employeeToBuild.setStoreId(storeId);
+            return this;
+        }
+
+        public  EmployeeBuilder birthDate(LocalDate birthDate) {
+            this.employeeToBuild.setBirthDate(birthDate);
+            return this;
+        }
+
+        public  EmployeeBuilder salary(Double salary) {
+            this.employeeToBuild.setSalary(salary);
+            return this;
+        }
+
+        public  EmployeeBuilder educationLevel(String educationLevel) {
+            this.employeeToBuild.setEducationLevel(educationLevel);
+            return this;
+        }
+
+        public  EmployeeBuilder maritalStatus(String maritalStatus) {
+            this.employeeToBuild.setMaritalStatus(maritalStatus);
+            return this;
+        }
+
+        public  EmployeeBuilder gender(String gender) {
+            this.employeeToBuild.setGender(gender);
+            return this;
+        }
+
+        public  EmployeeBuilder positionId(Integer positionId) {
+            this.employeeToBuild.setPositionId(positionId);
+            return this;
+        }
+
+        public  EmployeeBuilder positionTitle(String positionTitle) {
+            this.employeeToBuild.setPositionTitle(positionTitle);
+            return this;
+        }
+
+        public  EmployeeBuilder hireDate(LocalDateTime hireDate) {
+            this.employeeToBuild.setHireDate(hireDate);
+            return this;
+        }
+
+        public  EmployeeBuilder endDate(LocalDateTime endDate) {
+            this.employeeToBuild.setEndDate(endDate);
+            return this;
+        }
+
+        public  EmployeeBuilder supervisorId(Integer supervisorId) {
+            this.employeeToBuild.setSupervisorId(supervisorId);
+            return this;
+        }
+
+        public  EmployeeBuilder managementRole(String managementRole) {
+            this.employeeToBuild.setManagementRole(managementRole);
+            return this;
+        }
+
+        public  EmployeeBuilder departmentId(Integer departmentId) {
+            this.employeeToBuild.setDepartmentId(departmentId);
+            return this;
+        }
     }
 }
