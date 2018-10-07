@@ -15,7 +15,7 @@ import static junit.framework.TestCase.assertTrue;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest @ActiveProfiles("test")
-public class FoodmartServiceTest {
+public class FoodmartServiceIT {
 
     @Autowired
     private FoodmartService foodmartService;
