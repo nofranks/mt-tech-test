@@ -1,4 +1,4 @@
-package org.olly.matillion.foodmart.repository;
+package org.olly.matillion.foodmart.repository.employee;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

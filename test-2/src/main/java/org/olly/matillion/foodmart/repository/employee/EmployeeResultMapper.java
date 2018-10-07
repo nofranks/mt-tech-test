@@ -1,4 +1,4 @@
-package org.olly.matillion.foodmart.repository;
+package org.olly.matillion.foodmart.repository.employee;
 
 import org.olly.matillion.foodmart.model.Employee;
 

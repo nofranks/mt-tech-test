@@ -1,6 +1,5 @@
-package org.olly.matillion.foodmart.repository;
+package org.olly.matillion.foodmart.repository.employee;
 
-import org.olly.matillion.foodmart.FoodmartApplication;
 import org.olly.matillion.foodmart.data.DataConnection;
 import org.olly.matillion.foodmart.data.DataConnectionException;
 import org.olly.matillion.foodmart.data.MySqlDataConnection;
@@ -37,7 +36,7 @@ public class SqlEmployeeRepository implements EmployeeRepository {
                     "e.gender," +
                     "e.management_role from employee e " +
                     "inner join department d on e.department_id = d.department_Id " +
-                    "left join position p on e.position_id = p.position_id " +
+                    "inner join position p on e.position_id = p.position_id " +
                     "where d.department_description = ? and p.pay_type = ? and e.education_level = ?";
 
     public SqlEmployeeRepository(){

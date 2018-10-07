@@ -2,9 +2,9 @@ package org.olly.matillion.foodmart.service;
 
 import org.olly.matillion.foodmart.data.DataConnectionException;
 import org.olly.matillion.foodmart.model.Employee;
-import org.olly.matillion.foodmart.repository.EmployeeQueryException;
-import org.olly.matillion.foodmart.repository.EmployeeRepository;
-import org.olly.matillion.foodmart.repository.SqlEmployeeRepository;
+import org.olly.matillion.foodmart.repository.employee.EmployeeQueryException;
+import org.olly.matillion.foodmart.repository.employee.EmployeeRepository;
+import org.olly.matillion.foodmart.repository.employee.SqlEmployeeRepository;
 
 import java.util.List;
 
