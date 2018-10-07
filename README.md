@@ -4,7 +4,7 @@ This repository contains solutions for technical tests 1 and 2. All solutions ar
 
 ## Test 1
 
-This application takes the two strings below and compares the characters at each point in the strings respectively. The strings are 23 characters long and share a single character, resulting in a reponse of 22
+This application takes the two strings below and compares the characters at each point in the strings respectively. The strings are 23 characters long and share a single character, resulting in a reponse of 22 differences.
 
 * "Matillion Tech Test ..n"
 * "Techtest from Matillion"
@@ -19,7 +19,7 @@ To run as jar:
 ## Test 2
 
 This application takes a department, pay type and education level from the user and executes a select query on the provided database, logging the result of the query to the console. The following assumptions have been made:
-* The desired output of the query is the contents of the ```employee``` table
+* The desired output of the query are the full rows of the ```employee``` table matching the query
 * The value for the department parameter is the value stored in ```departments.department_description``` table as opposed to the department_id column.
 
 For each solution, in the console/terminal you will be prompted for a department description, pay type and education level. The query will then be executed with these values. Alternatively, these values can be provided as program arguments on the command line in the order above. If three arguments are provided, the program will try to execute the query with these values.
