@@ -49,6 +49,7 @@ This solution assumes a mySql database is available at ```jdbc:mysql://localhost
 * spring.datasource.password
 
 Alternatively, these properties can be updated at src/main/resources/application.properties
+
 To run in ide:
 * Execute main method in ```org.olly.matillion.foodmart.FoodmartApplication``` in test-2-spring module
 
