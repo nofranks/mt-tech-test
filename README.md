@@ -24,7 +24,7 @@ This application takes a department, pay type and education level from the user 
 
 For each solution, in the console/terminal you will be prompted for a department description, pay type and education level. The query will then be executed with these values. Alternatively, these values can be provided as program arguments on the command line in the order above. If three arguments are provided, the program will try to execute the query with these values.
 
-Sample input: ```"HQ General Management", "Monthly", "Bachelors Degree"```
+Sample input: ```"HQ General Management" "Monthly" "Bachelors Degree"```
 ### test-2 JDBC Implementation
 
 NB: The integration tests for this implementation require the presence of the sample database that was provided. I have not had time to implement an in-memory solution to test the query against during the build. The unit tests are carried out on a mock of the employee repository and the integration tests will only be executed if the verify target is included in the mvn command.
@@ -39,7 +39,7 @@ To run in ide:
 To run as jar:
 * From the repository root director, change directory to 'test-2'
 * Run ```mvn package```
-* Run ```java -jar target/test-2-0.0.1-SNAPSHOT-jar-with-dependencies.jar```
+* Run ```java -jar target/test-2-0.0.1-SNAPSHOT-jar-with-dependencies.jar "HQ General Management" "Monthly" "Bachelors Degree"```
 
 ### test-2 SpringBoot Commandline Implementation
 
@@ -54,4 +54,4 @@ To run in ide:
 To run as jar:
 * From the repository root director, change directory to 'test-2-spring'
 * Run ```mvn package```
-* Run ```java -jar target/test-2-0.0.1-SNAPSHOT-jar-with-dependencies.jar```
+* Run ```java -jar target/test-2-0.0.1-SNAPSHOT-jar-with-dependencies.jar "HQ General Management" "Monthly" "Bachelors Degree"```
