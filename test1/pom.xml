@@ -13,16 +13,10 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
         <maven.surefire.version>2.22.0</maven.surefire.version>
-        <slf4j.version>1.7.25</slf4j.version>
         <junit.version>5.3.1</junit.version>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>${slf4j.version}</version>
-        </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
@@ -56,7 +50,7 @@
                             <archive>
                                 <manifest>
                                     <mainClass>
-                                        org.olly.matillion.test1.Application
+                                        org.olly.matillion.charactercomparator.Application
                                     </mainClass>
                                 </manifest>
                             </archive>

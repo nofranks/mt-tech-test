@@ -1,4 +1,4 @@
-package org.olly.matillion.test1;
+package org.olly.matillion.charactercomparator;
 
 
 import org.junit.jupiter.api.BeforeEach;
@@ -6,8 +6,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class StringComparatorTest {
+public class CharacterComparatorTest {
 
     CharacterComparator characterComparator;
 
@@ -17,7 +18,7 @@ public class StringComparatorTest {
     }
 
     @Test
-    public void givenTwoStringsSharing5Characters_whenCompared_expect5(){
+    public void givenTwoStringsSharing5Characters_whenCompared_expect5() throws CharacterComparatorException {
 
         String one = "ABCDEFGHIJ";
         String two = "AXCXEXGXIX";
@@ -28,7 +29,7 @@ public class StringComparatorTest {
     }
 
     @Test
-    public void givenTwoEqualStrings_whenCompared_expect0(){
+    public void givenTwoEqualStrings_whenCompared_expect0() throws CharacterComparatorException {
         String one = "TESTstring";
         String two = "TESTstring";
         assertEquals(one, two);
@@ -38,11 +39,19 @@ public class StringComparatorTest {
     }
 
     @Test
-    public void givenTwoStringsSharingNoCharacters_whenCompared_expectStringLength(){
+    public void givenTwoStringsSharingNoCharacters_whenCompared_expectStringLength() throws CharacterComparatorException {
         String one = "12345A";
         String two = "67890B";
 
         long numberOfDifferences = characterComparator.calculateDifferences(one, two);
         assertEquals(one.length(), numberOfDifferences);
+    }
+
+    @Test
+    public void givenTwoStringsWithDifferentLengths_whenCompared_expectException(){
+        String one = "one";
+        String two = "one plus one";
+
+        assertThrows(CharacterComparatorException.class, () -> characterComparator.calculateDifferences(one, two));
     }
 }
