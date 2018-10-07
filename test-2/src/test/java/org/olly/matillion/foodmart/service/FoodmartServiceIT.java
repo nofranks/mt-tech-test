@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @DisplayName("when querying for employees")
-public class FoodmartServiceTest {
+public class FoodmartServiceIT {
 
     private FoodmartService foodmartService;
 
