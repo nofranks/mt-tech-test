@@ -27,7 +27,7 @@ For each solution, in the console/terminal you will be prompted for a department
 Sample input: ```"HQ General Management" "Monthly" "Bachelors Degree"```
 ### test-2 JDBC Implementation
 
-NB: The integration tests for this implementation require the presence of the sample database that was provided. I have not had time to implement an in-memory solution to test the query against during the build. The unit tests are carried out on a mock of the employee repository and the integration tests will only be executed if the verify target is included in the mvn command.
+NB: The integration tests for this implementation require the presence of the sample database that was provided. I have not had time to implement an in-memory solution to test the query against during the build. The unit tests are carried out on a mock of the FoodmartService and the integration tests will only be executed if the verify target is included in the mvn command.
 
 This solution assumes a mySql database is available at ```jdbc:mysql://localhost:3306/foodmart``` with username ```root``` and empty password. These values can be overwritten from the command line with the following system properties:
 * foodmart.db.url
