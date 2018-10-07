@@ -2,6 +2,7 @@ INSERT INTO position VALUES (1,'President','Monthly',25000.0000,85000.0000,'Seni
 
 INSERT INTO department VALUES (1,'HQ General Management'),(2,'HQ Information Systems'),(3,'HQ Marketing'),(4,'HQ Human Resources'),(5,'HQ Finance and Accounting'),(11,'Store Management'),(14,'Store Information Systems'),(15,'Permanent Checkers'),(16,'Temp Checkers'),(17,'Permanent Stockers'),(18,'Temp Stockers'),(19,'Store Permanent Butchers');
 
-INSERT INTO employee VALUES (1,'Sheri Nowmer','Sheri','Nowmer',1,'President',0,1,'1961-08-26','1994-12-01 00:00:00',NULL,80000.0000,0,'Graduate Degree','S','F','Senior Management'),
+INSERT INTO employee VALUES
+(1,'Sheri Nowmer','Sheri','Nowmer',1,'President',0,1,'1961-08-26','1994-12-01 00:00:00',NULL,80000.0000,0,'Graduate Degree','S','F','Senior Management'),
 (2,'Derrick Whelply','Derrick','Whelply',2,'VP Country Manager',0,1,'1915-07-03','1994-12-01 00:00:00',NULL,40000.0000,1,'Graduate Degree','M','M','Senior Management'),
 (4,'Michael Spence','Michael','Spence',2,'VP Country Manager',0,1,'1969-06-20','1998-01-01 00:00:00',NULL,40000.0000,1,'Batchelors Degree','S','M','Senior Management');

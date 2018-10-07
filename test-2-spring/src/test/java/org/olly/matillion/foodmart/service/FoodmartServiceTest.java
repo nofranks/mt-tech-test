@@ -21,12 +21,14 @@ public class FoodmartServiceTest {
     private FoodmartService foodmartService;
 
     @Test
-    public void givenDepartmentPaytypeEducation_whenEmployeesRequested_returnThreeEmployees(){
-        final String educationLevel = "Graduate Degree";
+    public void givenDepartmentPaytypeEducation_whenEmployeesRequested_returnEmployeeId4(){
+        final String educationLevel = "Batchelors Degree";
+        final Integer expectedEmployeeId = 4;
         List<Employee> employees = foodmartService.findEmployees("HQ General Management", "Monthly", educationLevel);
-        assertTrue(!employees.isEmpty());
+        assertEquals(1, employees.size());
         Employee employee = employees.get(0);
         assertEquals(educationLevel, employee.getEducationLevel());
+        assertEquals(expectedEmployeeId, employee.getId());
     }
 
     @Test

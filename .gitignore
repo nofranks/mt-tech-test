@@ -21,5 +21,4 @@ buildNumber.properties
 *.iml
 .idea/
 
-test-2-spring/
 .DS_Store
