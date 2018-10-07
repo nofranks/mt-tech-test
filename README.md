@@ -14,7 +14,7 @@ To run in IDE:
 To run as jar:
 * From the repository root directory, change directory to 'test1'
 * Run ```mvn package```
-* Run ```java -jar target/test-1-1.0-SNAPSHOT-jar-with-dependencies.jar```
+* Run ```java -jar target/test-1-1.0-SNAPSHOT-jar-with-dependencies.jar "arg1" "arg2"```
 
 ## Test 2
 
