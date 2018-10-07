@@ -10,9 +10,9 @@ This application takes the two strings below and compares the characters at each
 * "Techtest from Matillion"
 
 To run in IDE:
-* Execute main method in org.olly.matillion.test1.Application
+* Execute main method in ```org.olly.matillion.test1.Application```
 To run as jar:
-* From the repository root director, change directory to 'test1'
+* From the repository root directory, change directory to 'test1'
 * Run ```mvn package```
 * Run ```java -jar target/test-1-1.0-SNAPSHOT-jar-with-dependencies.jar```
 
@@ -22,9 +22,33 @@ This application takes a department, pay type and education level from the user 
 * The desired output of the query is the contents of the ```employee``` table
 * The value for the department parameter is the value stored in ```departments.department_description``` table as opposed to the department_id column.
 
+For each solution, in the console/terminal you will be prompted for a department description, pay type and education level. The query will then be executed with these values. Alternatively, these values can be provided as program arguments on the command line in the order above. If three arguments are provided, the program will try to execute the query with these values.
+
+
 ### test-2 JDBC Implementation
 
-This solution assumes a mySql database is available at ```dbc:mysql://localhost:3306/foodmart``` with username ```root``` and empty password. These values can be overwritten from the command line with the following system properties:
+This solution assumes a mySql database is available at ```jdbc:mysql://localhost:3306/foodmart``` with username ```root``` and empty password. These values can be overwritten from the command line with the following system properties:
 * foodmart.db.url
 * foodmart.db.username
 * foodmart.db.password
+
+To run in ide:
+* Execute main method in ```org.olly.matillion.foodmart.FoodmartApplication``` in test-2 module
+To run as jar:
+* From the repository root director, change directory to 'test-2'
+* Run ```mvn package````
+* Run ```java -jar target/test-2-0.0.1-SNAPSHOT-jar-with-dependencies.jar```
+
+## test-2 SpringBoot Commandline Implementation
+
+This solution assumes a mySql database is available at ```jdbc:mysql://localhost:3306/foodmart``` with username ```root``` and empty password. These values can be overwritten from the command line with the following system properties:
+* spring.datasource.url
+* spring.datasource.username
+* spring.datasource.password
+
+To run in ide:
+* Execute main method in ```org.olly.matillion.foodmart.FoodmartApplication``` in test-2-spring module
+To run as jar:
+* From the repository root director, change directory to 'test-2-spring'
+* Run ```mvn package````
+* Run ```java -jar target/test-2-0.0.1-SNAPSHOT-jar-with-dependencies.jar```
