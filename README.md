@@ -41,7 +41,7 @@ To run as jar:
 * Run ```mvn package```
 * Run ```java -jar target/test-2-0.0.1-SNAPSHOT-jar-with-dependencies.jar```
 
-## test-2 SpringBoot Commandline Implementation
+### test-2 SpringBoot Commandline Implementation
 
 This solution assumes a mySql database is available at ```jdbc:mysql://localhost:3306/foodmart``` with username ```root``` and empty password. These values can be overwritten from the command line with the following system properties:
 * spring.datasource.url
