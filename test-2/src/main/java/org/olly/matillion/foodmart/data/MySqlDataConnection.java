@@ -10,9 +10,9 @@ public class MySqlDataConnection implements DataConnection {
     final String JDBC_USERNAME = "foodmart.db.username";
     final String JDBC_PASSWORD = "foodmart.db.password";
 
-    private String jdbc_url = "jdbc:mysql://localhost:3306/foodmart";
-    private String jdbc_username = "root";
-    private String jdbc_password = "";
+    private String jdbc_url = "jdbc:mysql://mysql-technical-test.cq5i4y35n9gg.eu-west-1.rds.amazonaws.com/foodmart";
+    private String jdbc_username = "technical_test";
+    private String jdbc_password = "HopefullyProspectiveDevsDontBreakMe";
 
     public MySqlDataConnection(){
         super();
